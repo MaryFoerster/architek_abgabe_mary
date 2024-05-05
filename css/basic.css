@@ -1,0 +1,207 @@
+
+*:root {
+  --color--p: #204d8c;
+  --color--grey: #424242;
+}
+
+/* lexend-deca-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lexend Deca';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/lexend-deca-v21-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* lexend-deca-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lexend Deca';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/lexend-deca-v21-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+h1 {
+  color: var(--color--grey);
+  font-family: 'Lexend Deca';
+}
+
+h2 {
+  color: var(--color--grey);
+  font-family: 'Lexend Deca';
+}
+
+h3 {
+  color: var(--color--grey);
+  font-family: 'Lexend Deca';
+}
+
+nav a {
+  font-family: 'Lexend Deca';
+}
+
+p {
+  color: var(--color--grey);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* -----------text-hover */
+.line_hover {
+  color: var(--color--p);
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  }
+  .line_hover::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  border-radius: 4px;
+  background-color: var(--color--p);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  cursor: pointer;
+  transition: transform .3s ease-in-out;
+  }
+  .line_hover:hover::before {
+  transform-origin: left;
+  cursor: pointer;
+  transform: scaleX(1);
+  }
+  /* -----------text-hover */
+/* ------------nav----------------------------------------------------------------------------------------------------------- */
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+  color: var(--color--p);
+}
+.icon-custom {
+  font-size: 2rem;
+  color: var(--color--grey);
+}
+.icon-custom:hover {
+  opacity: 0.5;
+}
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: none;
+  }
+  .navbar-toggler {
+  border: none;
+  }
+  .navbar,
+  .container-fluid {
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  }
+  nav img {
+  width: 4rem;
+  }
+  nav,
+  .nav-bg,
+  .navbar {
+  font-size: 16px;
+  z-index: 1000;
+  background-color: white;
+  border-bottom: solid 1px  var(--color--grey);
+  }
+  .profil-icon {
+    color: var(--color--p);
+    padding: 0.8rem;
+  }
+  .profil-icon:hover {
+   opacity: 0.5;
+  }
+  @media screen and (min-width: 700px) {
+    .profil-icon {
+      padding: 0.8rem;
+      border-radius: 10rem;
+      margin-left: 1.5rem;
+      margin-top: 0rem;
+    }
+  }
+  .profil-icon2 {
+    color: green;
+  }
+  /* ------------nav----------------------------------------------------------------------------------------------------------- */
+
+  .border-left {
+    border-left: solid rgb(82, 82, 82) 1px ;
+  }
+
+  .border-right {
+    border-right: solid rgb(82, 82, 82) 1px ;
+  }
+
+  input {
+    width: 18rem;
+    padding: 0.7rem;
+    border: none;
+    border: solid var(--color--grey) 1px;
+  }
+
+  .btn-custom {
+    background: var(--color--grey);
+    font-weight: bold;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.btn-custom:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+
+.input-custom {
+  border-left: solid rgb(82, 82, 82) 1px ;
+  border-right: solid rgb(82, 82, 82) 1px ;
+}
+
+footer img {
+  width: 6rem;
+}
+
+.home {
+  max-height: 20rem;
+}
+
+.footer-hover:hover {
+  opacity: .5;
+}
+#scroll-top {
+  display: none; 
+  position: fixed; 
+  bottom: 60px; 
+  border: none;
+  right: 10px; 
+  z-index: 3000; 
+  outline: none;
+  background-color: var(--color--p); 
+  color: white; 
+  cursor: pointer; 
+  padding: 10px; 
+  border-radius: 2px;
+  font-size: 15px; 
+  opacity: 0.8;
+}
+
+#scroll-top:hover {
+  background-color: var(--color--p);
+  opacity: .5;
+}
+.bg-grey {
+  background-color: #f3f3f3;
+}
+
+.header-bg {
+  background-color: red;
+  background-image: url(../img/header.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
